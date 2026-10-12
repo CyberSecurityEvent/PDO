@@ -24,8 +24,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 #grid{position:fixed;inset:0;pointer-events:none;opacity:.35;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 80%)}
 
 /* ---------- fixed chrome ---------- */
-#brand{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:16px;z-index:60;display:flex;align-items:center;gap:12px;padding:6px 14px 6px 6px;background:rgba(6,16,29,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px}
-#brand .pdo{display:block;width:44px;height:44px;background:#fff;border-radius:10px;padding:5px;object-fit:contain}
+#brand{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:16px;z-index:60;display:flex;align-items:center;gap:12px;padding:6px 14px 6px 6px;background:rgba(6,16,29,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px}
+#brand .pdo{display:block;width:44px;height:44px;background:#0a1626;border-radius:10px;padding:5px;object-fit:contain}
 #brand .oman{display:block;height:30px;width:auto}
 #progress{position:fixed;top:0;left:0;right:0;height:4px;background:rgba(255,255,255,.06);z-index:70}
 #progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--green2));transition:width .8s ease;box-shadow:0 0 12px var(--green)}
@@ -36,7 +36,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 #next:hover{background:#fff}
 #back{border:1px solid rgba(255,255,255,.25);background:rgba(6,16,29,.8);color:var(--text);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 #back:hover{border-color:rgba(255,255,255,.6)}
-#sound{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));right:16px;z-index:60;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(6,16,29,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:15px;font-weight:600}
+#sound{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));left:16px;z-index:60;padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(6,16,29,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:15px;font-weight:600}
 #sound:hover{border-color:rgba(255,255,255,.4)}
 
 /* intro journey illustration */
@@ -317,7 +317,7 @@ p.lead{font-size:clamp(15px,2.2vw,18px);color:var(--muted);margin:0 0 18px}
 <section class="scene" id="book">
   <div class="wrap">
     <div class="center"><span class="chapter">Chapter 1 · Friday, 9:47 PM</span>
-      <h2>Weekend getaway. One last step.</h2></div>
+      <h2>Your vacation is one click away.</h2></div>
     <div class="win" style="max-width:620px;margin:16px auto 0">
       <div class="bar"><div class="dots"><i></i><i></i><i></i></div><div class="url">🔒 <b>bluedune-stays.com</b>/checkout</div></div>
       <div class="body">
@@ -329,14 +329,7 @@ p.lead{font-size:clamp(15px,2.2vw,18px);color:var(--muted);margin:0 0 18px}
         <div class="field"><label>Email address (for your booking confirmation)</label><div class="fake-input pulse" id="emailField">&nbsp;</div></div>
       </div>
     </div>
-    <div class="rv" id="bookChoice">
-      <p class="center" style="margin:18px 0 0;font-weight:600">Which email will you use?</p>
-      <div class="choice-grid" style="max-width:620px;margin-left:auto;margin-right:auto">
-        <button class="choice" data-pick="work"><span class="t">💼 Work email</span><span class="v n-email"></span></button>
-        <button class="choice" data-pick="personal"><span class="t">🏠 Personal email</span><span class="v n-personal"></span></button>
-      </div>
-    </div>
-    <div class="caption rv" id="bookFb"></div>
+    <div class="caption rv" id="bookFb">Without a second thought, you typed your <span class="em">work email</span>. Quick and easy.</div>
   </div>
 </section>
 
@@ -396,22 +389,7 @@ p.lead{font-size:clamp(15px,2.2vw,18px);color:var(--muted);margin:0 0 18px}
       <div class="node n5" style="text-align:left"><div class="ic">🚚</div><div class="k">Suppliers</div><div class="v">News & public tenders</div></div>
       <div class="node n6" style="text-align:left"><div class="ic">✉️</div><div class="k">Email format</div><div class="v mono">firstname@pdo.co.om</div></div>
     </div>
-    <div class="caption red rv"><span class="mono">attacker_notes.txt:</span> “Real person. Real role. Real colleagues. <b>Perfect target.</b>”</div>
-  </div>
-</section>
-
-<!-- 5 · QUIZ -->
-<section class="scene" id="quiz">
-  <div class="wrap center">
-    <span class="chapter">Quick check</span>
-    <h2>What's the main risk here?</h2>
-    <div class="opts" id="quizOpts">
-      <button class="opt" data-ok="0"><span class="l">A</span>The hotel booking might get cancelled</button>
-      <button class="opt" data-ok="0"><span class="l">B</span>PDO's network is instantly hacked</button>
-      <button class="opt" data-ok="1"><span class="l">C</span>Attackers can craft believable phishing, impersonation and credential attacks</button>
-      <button class="opt" data-ok="0"><span class="l">D</span>No real risk — it's just an email address</button>
-    </div>
-    <div class="caption rv" id="quizFb"></div>
+    <div class="caption red rv"><span class="mono">attacker_notes.txt:</span> “Real person. Real role. Real colleagues. <b>Perfect target.</b>”<br><span class="small">A leaked work email isn't a hack by itself, but it makes phishing and impersonation far more believable.</span></div>
   </div>
 </section>
 
@@ -565,7 +543,7 @@ p.lead{font-size:clamp(15px,2.2vw,18px);color:var(--muted);margin:0 0 18px}
 (function(){
   const $ = s => document.querySelector(s);
   const $$ = s => Array.from(document.querySelectorAll(s));
-  const ORDER = ['intro','book','booked','breach','profile','quiz','phish','login','steal','chain','imperson','sort','end'];
+  const ORDER = ['intro','book','booked','breach','profile','phish','login','steal','chain','imperson','sort','end'];
   const S = {};
   let timers = [];
   let history = [];
@@ -723,7 +701,6 @@ p.lead{font-size:clamp(15px,2.2vw,18px);color:var(--muted);margin:0 0 18px}
     S.email = local + '@pdo.co.om';
     $$('.n-name').forEach(e => e.textContent = S.name);
     $$('.n-email').forEach(e => e.textContent = S.email);
-    $$('.n-personal').forEach(e => e.textContent = local + '.home@mail.com');
     $('#impAvatar').textContent = S.name.charAt(0).toUpperCase();
   }
 
@@ -736,18 +713,17 @@ p.lead{font-size:clamp(15px,2.2vw,18px);color:var(--muted);margin:0 0 18px}
 
     book(){
       mood('calm');
-      $('#emailField').innerHTML = '&nbsp;';
-      $('#emailField').classList.add('pulse');
-      $('#bookFb').innerHTML = '';
-      $$('#bookChoice .choice').forEach(b => b.disabled = false);
-      reveal($('#bookChoice'), 1100);
+      const f = $('#emailField');
+      f.textContent = ''; f.classList.add('pulse');
+      const step = 90, start = 2000, done = start + S.email.length * step;
+      S.email.split('').forEach((ch, i) => later(start + i * step, () => { sfx('type'); f.textContent += ch; }));
+      later(done + 300, () => { f.classList.remove('pulse'); sfx('click'); });
+      reveal($('#bookFb'), done + 800);
+      offerNext('booked', done + 2800);
     },
 
     booked(){
       mood('calm');
-      $('#bookedTitle').textContent = S.choseWork
-        ? 'Booking confirmed. Everything looks normal.'
-        : 'Now imagine you had used your work email…';
       $$('#booked .rv').forEach((e, i) => reveal(e, 500 + i * 1300));
       later(550, () => sfx('ding'));
       later(1900, () => { const t = $('#track1'); t.classList.remove('go'); void t.offsetWidth; t.classList.add('go'); sfx('whoosh'); });
@@ -778,12 +754,7 @@ p.lead{font-size:clamp(15px,2.2vw,18px);color:var(--muted);margin:0 0 18px}
         later(900 + i * 550, () => { sfx('blip', i); n.classList.add('in'); drawLines(); const l = svg.children[i]; if (l) l.classList.add('on'); });
       });
       reveal($('#profile .caption'), 900 + 6 * 550 + 300);
-      offerNext('quiz', 900 + 6 * 550 + 1200);
-    },
-
-    quiz(){
-      mood('danger');
-      $$('#quizOpts .opt').forEach(b => { b.disabled = false; b.classList.remove('right','wrong'); });
+      offerNext('phish', 900 + 6 * 550 + 1200);
     },
 
     phish(){
@@ -910,11 +881,9 @@ p.lead{font-size:clamp(15px,2.2vw,18px);color:var(--muted);margin:0 0 18px}
   /* ---------- sort game ---------- */
   const SORT = [
     ['🏨','Hotel booking','personal'],
-    ['🛒','Online shopping','personal'],
     ['🏭','Company-approved supplier portal','work'],
-    ['🎬','Streaming subscription','personal'],
-    ['🎓','Official PDO training platform','work'],
-    ['🍔','Food delivery app','personal']
+    ['🛒','Online shopping','personal'],
+    ['🎓','Official PDO training platform','work']
   ];
   function showCard(){
     const d = SORT[S.sortIdx];
@@ -951,37 +920,6 @@ p.lead{font-size:clamp(15px,2.2vw,18px);color:var(--muted);margin:0 0 18px}
     Sound.init(); sfx('click');
     setName(v); go('book');
   });
-
-  $$('#bookChoice .choice').forEach(b => b.addEventListener('click', () => {
-    $$('#bookChoice .choice').forEach(x => x.disabled = true);
-    S.choseWork = b.dataset.pick === 'work';
-    const f = $('#emailField'); f.classList.remove('pulse');
-    f.textContent = S.choseWork ? S.email : $('.n-personal').textContent;
-    const fb = $('#bookFb');
-    sfx(S.choseWork ? 'click' : 'success');
-    if (S.choseWork){
-      fb.className = 'caption rv';
-      fb.innerHTML = 'Done in one click. Convenient… <b>but is it a good idea?</b>';
-      reveal(fb, 300); offerNext('booked', 1300);
-    } else {
-      fb.className = 'caption green rv';
-      fb.innerHTML = '✅ <b>Smart choice.</b> Personal services → personal email.<br><span class="small">But many people use their work email. Let\'s see where that leads.</span>';
-      reveal(fb, 300); offerNext('booked', 1500, 'Follow that path');
-    }
-  }));
-
-  $$('#quizOpts .opt').forEach(b => b.addEventListener('click', () => {
-    const ok = b.dataset.ok === '1'; S.quizOk = ok;
-    $$('#quizOpts .opt').forEach(x => { x.disabled = true; if (x.dataset.ok === '1') x.classList.add('right'); });
-    if (!ok) b.classList.add('wrong');
-    sfx(ok ? 'success' : 'error');
-    const fb = $('#quizFb');
-    fb.className = 'caption rv ' + (ok ? 'green' : 'red');
-    fb.innerHTML = (ok ? '✅ <b>Exactly.</b> ' : '❌ <b>Not quite.</b> ') +
-      'A leaked work email isn\'t a hack by itself — but it gives attackers a <b>verified corporate identity</b> to make phishing, impersonation and social engineering far more believable.';
-    reveal(fb, 100);
-    offerNext('phish', 1600);
-  }));
 
   $$('#phishChoice button').forEach(b => b.addEventListener('click', () => {
     $$('#phishChoice button').forEach(x => x.disabled = true);
